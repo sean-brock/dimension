@@ -17,6 +17,11 @@ func (u Vec) Add(v Vec) Vec {
 	return V(u.X+v.X, u.Y+v.Y)
 }
 
+// Dot returns the dot product of the vector.
+func (u Vec) Dot() int {
+	return u.X * u.Y
+}
+
 // String returns the string representation of the vector.
 func (u Vec) String() string {
 	return fmt.Sprintf("Vec(%v, %v)", u.X, u.Y)
