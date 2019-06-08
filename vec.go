@@ -26,3 +26,11 @@ func (u Vec) Dot() int {
 func (u Vec) String() string {
 	return fmt.Sprintf("Vec(%v, %v)", u.X, u.Y)
 }
+
+// Inside returns true if 0 < u < v
+func (u Vec) Inside(v Vec) bool {
+	if (u.X <= v.X) && (u.X >= 0) && (u.Y <= v.Y) && (u.Y >= 0) {
+		return true
+	}
+	return false
+}
